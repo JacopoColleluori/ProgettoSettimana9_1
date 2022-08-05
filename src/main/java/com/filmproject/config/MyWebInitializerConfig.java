@@ -1,12 +1,12 @@
-package com.filmproject;
+package com.filmproject.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class MyWebInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class MyWebInitializerConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() { //classe che verranno sostituite con le annotation con Spring
-		return null;
+		return new Class[0];
 	}
 
 	/* Classi di configurazione delle servlet e view di Spring*/

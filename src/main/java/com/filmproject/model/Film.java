@@ -9,7 +9,10 @@ import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import org.hibernate.annotations.Formula;
 
 @Entity
 public class Film {
@@ -19,6 +22,7 @@ public class Film {
 	private String director;
 
 	@Temporal(TemporalType.DATE)
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
 	private Date year;
 
 	private String movieType;
